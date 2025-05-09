@@ -53,15 +53,6 @@ export default function ConfirmAccountView() {
             </PinInput>
           </div>
         </form>
-
-        <nav className=" mt-5 flex flex-col space-y-1">
-          <span
-            className="text-center text-gray-500 font-normal"
-          >
-            Solicitar un <span className=" text-orange-500 font-semibold">nuevo código</span>
-          </span>
-          
-        </nav>
       </div>
     </>
   )
