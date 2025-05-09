@@ -5,20 +5,17 @@ import { userDashboardArraySchema, userDashboardSchema, type User } from "../typ
 export async function getUsers(){
     try {
         const { data } = await api.get('/auth')
-        // Validamos que concuerda con nuestro schema
         const response = userDashboardArraySchema.safeParse(data)
         if(response.success){
             return response.data
         }
     } catch (error) {
-        // Forzamos a que el error sea de axios
         if(isAxiosError(error) && error.response){
             throw new Error(error.response.data.error) 
         }       
     }
 }
 
-// Obtiene un proyecto por id
 export async function getUserById(idUsuario : User['idUsuario']){
     try {
         const { data } = await api.get(`/auth/user/${idUsuario}`)
@@ -27,7 +24,6 @@ export async function getUserById(idUsuario : User['idUsuario']){
             return response.data
         }
     } catch (error) {
-        // Forzamos a que el error sea de axios
         if(isAxiosError(error) && error.response){
             throw new Error(error.response.data.error) 
         }       

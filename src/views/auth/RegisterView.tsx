@@ -18,7 +18,6 @@ export default function RegisterView() {
 
   const { register, handleSubmit, watch, reset, formState: { errors } } = useForm<UserRegistrationForm>({ defaultValues: initialValues });
 
-  // Utilizamos mutate porque vamos a crear un proyecto
   const { mutate } = useMutation({
     mutationFn: createAcount,
     onError: (error) => {
