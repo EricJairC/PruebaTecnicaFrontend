@@ -17,7 +17,8 @@ export const userSchema = authSchema.pick({
     usuarioEmail: true,
     usuarioAlias: true
 }).extend({
-    idUsuario: z.number()
+    idUsuario: z.number(),
+    admin: z.boolean()
 })
 
 export const userDashboardSchema = authSchema.pick({

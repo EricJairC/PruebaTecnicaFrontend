@@ -30,7 +30,7 @@ export default function DashboardView() {
               className="flex flex-col justify-between px-5 py-5 bg-white shadow-md rounded-md h-[250px]"
             >
               <div className="relative flex justify-center items-center">
-              {(userAuth.idUsuario === user.idUsuario || userAuth.idUsuario === 1) && (
+              {(userAuth.idUsuario === user.idUsuario || userAuth.admin) && (
                 <Menu as="div" className="absolute inset-0 z-10">
                   <Menu.Button className="absolute top-2 right-0 p-0 text-orange-600 hover:text-orange-700">
                     <span className="sr-only">opciones</span>
