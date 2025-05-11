@@ -78,7 +78,7 @@ export default function DashboardView() {
                   <div className=" mb-2">
 
                   </div>
-                  {(userAuth.idUsuario === user.idUsuario || userAuth.idUsuario === 1) ? (
+                  {(userAuth.idUsuario === user.idUsuario || userAuth.admin) ? (
                   <Link to={`/user/${user.idUsuario}/edit`}
                     className="text-gray-600 cursor-pointer block hover:underline text-2xl font-bold truncate overflow-hidden whitespace-nowrap"
                   >{user.usuarioNombre}</Link>
